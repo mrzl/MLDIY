@@ -17,9 +17,13 @@ Python (anaconda?)
  - moviepy
 
 [Theano](http://deeplearning.net/software/theano/)
+
 [Tensorflow](https://www.tensorflow.org/)
+
 [Keras](https://keras.io)
+
 [tflearn](https://github.com/tflearn/tflearn)
+
 [lasagne](https://github.com/Lasagne/)
 
 [Torch](http://torch.ch/)
