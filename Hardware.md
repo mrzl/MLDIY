@@ -9,6 +9,7 @@
 
 #### External Setup notes
 - Roelof Pieters (@graphific) blog post on how to setup a machine: http://graphific.github.io/posts/building-a-deep-learning-dream-machine/
+- Which GPU to get for Deep Learning: http://timdettmers.com/2014/08/14/which-gpu-for-deep-learning/
 
 #### Offers
 
