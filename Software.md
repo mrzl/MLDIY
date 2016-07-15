@@ -20,6 +20,8 @@ Python (anaconda?)
 
 [Tensorflow](https://www.tensorflow.org/)
 
+[Magenta] (https://magenta.tensorflow.org/)
+
 [Keras](https://keras.io)
 
 [tflearn](https://github.com/tflearn/tflearn)
