@@ -7,6 +7,7 @@
 * Abstract image captioning: Show, Attend and Tell: Neural Image Caption Generation with Visual Attention: https://www.cs.toronto.edu/~rkiros/abstract_captions.html
 * Machine Learning problem bible: https://github.com/ben519/MLPB
 * End to end neural style: http://dmlc.ml/mxnet/2016/06/20/end-to-end-neural-style.html (https://github.com/dmlc/mxnet/tree/master/example/neural-style)
+* Modelling data to match lstm/rnn: https://keunwoochoi.wordpress.com/2016/02/23/lstmetallica/
 
 ### Papers
 * Human-level concept learning through probabilistic program induction (dec2015): http://www.cs.toronto.edu/~rsalakhu/papers/LakeEtAl2015Science.pdf
