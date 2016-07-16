@@ -8,6 +8,9 @@
 * Machine Learning problem bible: https://github.com/ben519/MLPB
 * End to end neural style: http://dmlc.ml/mxnet/2016/06/20/end-to-end-neural-style.html (https://github.com/dmlc/mxnet/tree/master/example/neural-style)
 * Modelling data to match lstm/rnn: https://keunwoochoi.wordpress.com/2016/02/23/lstmetallica/
+* RNN Effectiveness: https://karpathy.github.io/2015/05/21/rnn-effectiveness/
+* Long-term Recurrent Convolutional Networks (Image captioning with caffee): http://jeffdonahue.com/lrcn/
+* Generating Musical notations (folk songs via char/torch-rnn): https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/
 
 ### Papers
 * Human-level concept learning through probabilistic program induction (dec2015): http://www.cs.toronto.edu/~rsalakhu/papers/LakeEtAl2015Science.pdf

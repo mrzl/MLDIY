@@ -15,6 +15,7 @@ Python (anaconda?)
  - bhtsne
  - deeppy
  - moviepy
+ - 100loc charrnn https://gist.github.com/karpathy/d4dee566867f8291f086
 
 [Theano](http://deeplearning.net/software/theano/)
 
@@ -48,3 +49,4 @@ Applications
  - [pixel-rnn](https://github.com/igul222/pixel_rnn)
  - [synthesizing](https://github.com/Evolving-AI-Lab/synthesizing)
  - [deepdream](https://github.com/google/deepdream)
+ - [Passage] https://github.com/IndicoDataSolutions/Passage
