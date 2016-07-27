@@ -14,3 +14,20 @@
 
 ### Papers
 * Human-level concept learning through probabilistic program induction (dec2015): http://www.cs.toronto.edu/~rsalakhu/papers/LakeEtAl2015Science.pdf
+
+Image -> text:
+http://cs.stanford.edu/people/karpathy/deepimagesent/
+http://illustration2vec.net/
+
+text -> text:
+https://github.com/jcjohnson/torch-rnn
+https://github.com/memo/ofxMSAWord2Vec
+https://github.com/memo/ai-resources
+
+text -> image:
+https://github.com/Evolving-AI-Lab/synthesizing
+https://github.com/reedscot/icml2016
+http://www.creativeai.net/posts/tnW8ueaFoT2SnM22i/generative-adversarial-text-to-image-synthesis
+
+neural style transfer high resolution
+https://github.com/yusuketomoto/chainer-fast-neuralstyle/issues/1
