@@ -30,3 +30,38 @@ This notebook is designed to have as few dependencies as possible:
 
 ### Models ###
 not required. Just [start Jupyter](https://github.com/mrzl/MLDIY/wiki/Running-Jupyter-notebooks-remotely) open the browser and go.
+
+## [skip-thoughts](https://github.com/ryankiros/skip-thoughts)
+Sent2Vec encoder and training code from the paper Skip-Thought Vectors.
+
+### Dependencies ###
+This code is written in python. To use it you will need:
+- Python 2.7
+- Theano 0.7
+- NumPy and SciPy
+- scikit-learn
+- NLTK 3
+- Keras (for Semantic-Relatedness experiments only)
+- gensim (for vocabulary expansion when training new models)
+
+### Model files ###
+You will first need to download the model files and word embeddings. The embedding files (utable and btable) are quite large (>2GB) so make sure there is enough space available. The encoder vocabulary can be found in dictionary.txt.
+links in the repo
+
+## [text2image](https://github.com/emansim/text2image)
+Generating Images from Captions with Attention
+Code for paper Generating Images from Captions with Attention by Elman Mansimov, Emilio Parisotto, Jimmy Ba and Ruslan Salakhutdinov; ICLR 2016.
+We introduce a model that generates image blobs from natural language descriptions. The proposed model iteratively draws patches on a canvas, while attending to the relevant words in the description.
+
+### Dependencies ###
+- Python 2.7
+- Theano 0.7 (mostly tested using commit from June/July 2015)
+- numpy and scipy
+- h5py (HDF5 (>= 1.8.11))
+- skip-thoughts
+
+### Models? ###
+
+### Data ###
+Data sets are gigabytes big. there are several. links in the repo
+
