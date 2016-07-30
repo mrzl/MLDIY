@@ -1,16 +1,16 @@
 Software stack we'll want to be able to support.
 
 
-CUDA 7.5 + cudnn
+~~CUDA 7.5 + cudnn~~
 
-BLAS
+~~BLAS~~
 
 Python (anaconda?)
- - numpy, scipy
- - scikit-learn
- - opencv
+ - ~~numpy~~, ~~scipy~~
+ - ~~scikit-learn~~
+ - ~~opencv~~
  - pyyaml
- - h5py
+ - ~~h5py~~
  - librosa
  - bhtsne
  - deeppy
