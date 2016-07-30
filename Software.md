@@ -16,7 +16,6 @@ Python (anaconda?)
  - deeppy
  - moviepy
  - 100loc charrnn https://gist.github.com/karpathy/d4dee566867f8291f086
-
 [Theano](http://deeplearning.net/software/theano/)
 
 [Tensorflow](https://www.tensorflow.org/)
@@ -32,6 +31,8 @@ Python (anaconda?)
 [Torch](http://torch.ch/)
  - torch7
  - luarocks: loadcaffe, nn, image, lua-cjson, camera, qtlua, cutorch, cunn, cudnn, torch-hdf5
+
+[Docker](https://www.docker.com/)
 
 Applications
  - [neural-style](https://github.com/jcjohnson/neural-style)
