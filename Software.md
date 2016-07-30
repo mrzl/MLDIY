@@ -51,10 +51,10 @@ Applications
  - [synthesizing](https://github.com/Evolving-AI-Lab/synthesizing)
  - [deepdream](https://github.com/google/deepdream)
  - [tensorflow-speech-recognition](https://github.com/pannous/tensorflow-speech-recognition)
- - [Passage] https://github.com/IndicoDataSolutions/Passage
+ - [Passage](https://github.com/IndicoDataSolutions/Passage)
  - [skip-thoughts](https://github.com/ryankiros/skip-thoughts)
  - [text2image](https://github.com/emansim/text2image)
- - [deep-visualization-toolbox]https://github.com/yosinski/deep-visualization-toolbox
+ - [deep-visualization-toolbox](https://github.com/yosinski/deep-visualization-toolbox)
  
 Considerations
  - [warp-ctc](https://github.com/baidu-research/warp-ctc) Connectionist Temporal Classification is a loss function useful for performing supervised learning on sequence data, without needing an alignment between input data and labels.
