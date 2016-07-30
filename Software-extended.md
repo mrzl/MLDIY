@@ -19,7 +19,7 @@ This code is written in python. To use it you will need:
 
 ### Models? ###
 
-## (Google deepdream)[https://github.com/google/deepdream]
+## [Google deepdream](https://github.com/google/deepdream)
 This repository contains IPython Notebook with sample code, complementing Google Research blog post about Neural Network art. See original gallery for more examples.
 
 Dependencies
