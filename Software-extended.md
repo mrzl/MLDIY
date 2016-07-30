@@ -22,11 +22,11 @@ This code is written in python. To use it you will need:
 ## [Google deepdream](https://github.com/google/deepdream)
 This repository contains IPython Notebook with sample code, complementing Google Research blog post about Neural Network art. See original gallery for more examples.
 
-Dependencies
+### Dependencies ###
 This notebook is designed to have as few dependencies as possible:
 - Standard Python scientific stack: NumPy, SciPy, PIL, IPython. Those libraries can also be installed as a part of one of the scientific - packages for Python, such as Anaconda or Canopy.
 - Caffe deep learning framework
 - Google protobuf library that is used for Caffe model manipulation.
 
-### Model ###
+### Models ###
 not required. Just [start Jupyter](https://github.com/mrzl/MLDIY/wiki/Running-Jupyter-notebooks-remotely) open the browser and go.
