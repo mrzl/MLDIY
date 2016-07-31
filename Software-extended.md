@@ -1,3 +1,42 @@
+## [Google deepdream](https://github.com/google/deepdream)
+This repository contains IPython Notebook with sample code, complementing Google Research blog post about Neural Network art. See original gallery for more examples.
+
+### Dependencies ###
+This notebook is designed to have as few dependencies as possible:
+- Standard Python scientific stack: NumPy, SciPy, PIL, IPython. Those libraries can also be installed as a part of one of the scientific - packages for Python, such as Anaconda or Canopy.
+- Caffe deep learning framework
+- Google protobuf library that is used for Caffe model manipulation.
+
+### Models ###
+not required. Just [start Jupyter](https://github.com/mrzl/MLDIY/wiki/Running-Jupyter-notebooks-remotely) open the browser and go.
+
+## [neural-style](https://github.com/jcjohnson/neural-style)
+This is a torch implementation of the paper A Neural Algorithm of Artistic Style by Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge.
+The paper presents an algorithm for combining the content of one image with the style of another image using convolutional neural networks.
+
+### Depedencies ###
+- torch7
+- loadcaffe
+
+### Models ###
+Script downloads original VGG-19 model
+
+## [synthesizing](https://github.com/Evolving-AI-Lab/synthesizing)
+Synthesizing preferred inputs via deep generator networks.
+This repository contains source code necessary to reproduce some of the main results in the paper:
+
+### Dependencies ###
+- Install Caffe
+- Build the Python bindings for Caffe
+- If you have an NVIDIA GPU, you can optionally build Caffe with the GPU option to make it run faster
+- Make sure the path to your caffe/python folder in settings.py is correct
+- Install ImageMagick command-line interface on your system.
+
+### Models ###
+Models are downloaded with a script
+- BVLC reference CaffeNet: cd nets/caffenet
+- BVLC GoogLeNet: cd nets/googlenet
+- AlexNet CNN trained on MIT Places dataset
 
 ## [neural-storyteller](https://github.com/ryankiros/neural-storyteller) ##
 
@@ -18,18 +57,6 @@ This code is written in python. To use it you will need:
 - A version of Theano that Lasagne supports
 
 ### Models? ###
-
-## [Google deepdream](https://github.com/google/deepdream)
-This repository contains IPython Notebook with sample code, complementing Google Research blog post about Neural Network art. See original gallery for more examples.
-
-### Dependencies ###
-This notebook is designed to have as few dependencies as possible:
-- Standard Python scientific stack: NumPy, SciPy, PIL, IPython. Those libraries can also be installed as a part of one of the scientific - packages for Python, such as Anaconda or Canopy.
-- Caffe deep learning framework
-- Google protobuf library that is used for Caffe model manipulation.
-
-### Models ###
-not required. Just [start Jupyter](https://github.com/mrzl/MLDIY/wiki/Running-Jupyter-notebooks-remotely) open the browser and go.
 
 ## [skip-thoughts](https://github.com/ryankiros/skip-thoughts)
 Sent2Vec encoder and training code from the paper Skip-Thought Vectors.
