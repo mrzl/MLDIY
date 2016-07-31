@@ -38,26 +38,6 @@ Models are downloaded with a script
 - BVLC GoogLeNet: cd nets/googlenet
 - AlexNet CNN trained on MIT Places dataset
 
-## [neural-storyteller](https://github.com/ryankiros/neural-storyteller) ##
-
-neural-storyteller is a recurrent neural network that generates little stories about images. This repository contains code for generating stories with your own images, as well as instructions for training new models.
-
-### The whole approach contains 4 components: ###
-
-- skip-thought vectors
-- image-sentence embeddings
-- conditional neural language models
-- style shifting (described in this project)
-
-### Dependencies ###
-This code is written in python. To use it you will need:
-- Python 2.7
-- A recent version of NumPy and SciPy
-- Lasagne
-- A version of Theano that Lasagne supports
-
-### Models? ###
-
 ## [skip-thoughts](https://github.com/ryankiros/skip-thoughts)
 Sent2Vec encoder and training code from the paper Skip-Thought Vectors.
 
@@ -92,3 +72,22 @@ We introduce a model that generates image blobs from natural language descriptio
 ### Data ###
 Data sets are gigabytes big. there are several. links in the repo
 
+## [neural-storyteller](https://github.com/ryankiros/neural-storyteller) ##
+
+neural-storyteller is a recurrent neural network that generates little stories about images. This repository contains code for generating stories with your own images, as well as instructions for training new models.
+
+### The whole approach contains 4 components: ###
+
+- skip-thought vectors
+- image-sentence embeddings
+- conditional neural language models
+- style shifting (described in this project)
+
+### Dependencies ###
+This code is written in python. To use it you will need:
+- Python 2.7
+- A recent version of NumPy and SciPy
+- Lasagne
+- A version of Theano that Lasagne supports
+
+### Models? ###
