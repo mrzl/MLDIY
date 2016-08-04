@@ -55,6 +55,9 @@ Applications
  - [~~skip-thoughts~~](https://github.com/ryankiros/skip-thoughts)
  - [~~text2image~~](https://github.com/emansim/text2image)
  - [deep-visualization-toolbox](https://github.com/yosinski/deep-visualization-toolbox)
+ - [texture_nets](https://github.com/DmitryUlyanov/texture_nets)
+ - [word-rnn-tensorflow](https://github.com/hunkim/word-rnn-tensorflow)
+ - [dcga.torch](https://github.com/soumith/dcgan.torch)
  
 Considerations
  - [warp-ctc](https://github.com/baidu-research/warp-ctc) Connectionist Temporal Classification is a loss function useful for performing supervised learning on sequence data, without needing an alignment between input data and labels.
