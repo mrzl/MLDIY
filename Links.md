@@ -13,6 +13,7 @@
 * Generating Musical notations (folk songs via char/torch-rnn): https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/
 * upscaling images: https://github.com/nagadomi/waifu2x
 * some popular model classification code etc: https://github.com/fchollet/deep-learning-models
+* Machine learning threads on Reddit: https://www.reddit.com/r/MachineLearning/
 
 ### Papers
 * Human-level concept learning through probabilistic program induction (dec2015): http://www.cs.toronto.edu/~rsalakhu/papers/LakeEtAl2015Science.pdf
