@@ -24,6 +24,9 @@ http://illustration2vec.net/
 
 text -> text:
 https://github.com/jcjohnson/torch-rnn
+
+textanalysis & vectoring:
+https://github.com/facebookresearch/fastText
 https://github.com/memo/ofxMSAWord2Vec
 https://github.com/memo/ai-resources
 
