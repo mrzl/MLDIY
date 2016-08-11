@@ -15,6 +15,7 @@
 * some popular model classification code etc: https://github.com/fchollet/deep-learning-models
 * Machine learning threads on Reddit: https://www.reddit.com/r/MachineLearning/
 * fast nearest neighbours search python/c++ implementation: https://github.com/spotify/annoy
+* image completion using tensorflow: http://bamos.github.io/2016/08/09/deep-completion/
 
 ### Papers
 * Human-level concept learning through probabilistic program induction (dec2015): http://www.cs.toronto.edu/~rsalakhu/papers/LakeEtAl2015Science.pdf
