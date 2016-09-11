@@ -18,6 +18,8 @@
 * image completion using tensorflow: http://bamos.github.io/2016/08/09/deep-completion/
 * archive of various amounts of videos: https://archive.org/
 * pre-trained places365 cnn models: https://github.com/metalbubble/places365
+* NEW potential high-res style transfer via tiling using python3 :( : https://github.com/crowsonkb/style_transfer
+* another alternative style transfer implementation: https://github.com/titu1994/Neural-Style-Transfer
 
 ### Papers
 * Human-level concept learning through probabilistic program induction (dec2015): http://www.cs.toronto.edu/~rsalakhu/papers/LakeEtAl2015Science.pdf
