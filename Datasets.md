@@ -24,6 +24,24 @@ media theory, art, philosophy texts
 
 47GB of desktop screenshots from linux distributions
 
+### 4chan_scrape
+
+    /mnt/drive1/data/eco/gifs/b 37G 31593 gifs
+    /mnt/drive1/data/eco/gifs/pol 32G 27211 gifs
+    /mnt/drive1/data/eco/gifs/s 80M 32 gifs
+    /mnt/drive1/data/eco/gifs/fit 3,7G 2992 gifs
+    /mnt/drive1/data/eco/gifs/tv 9,4G 7297 gifs
+    /mnt/drive1/data/eco/gifs/ic 152M 150 gifs
+    
+    /mnt/drive1/4chan_scrape/b/ 583828 images
+    /mnt/drive1/4chan_scrape/fit/ 45943 images
+    /mnt/drive1/4chan_scrape/g/ 54270 images
+    /mnt/drive1/4chan_scrape/hc/ 17211 images
+    /mnt/drive1/4chan_scrape/ic/ 4628 images
+    /mnt/drive1/4chan_scrape/pol/ 413563 images
+    /mnt/drive1/4chan_scrape/s/ 43501 images
+    /mnt/drive1/4chan_scrape/tv/ 116843 images
+
 ## Audio
 
 ### opera
