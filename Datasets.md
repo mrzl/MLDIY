@@ -1,5 +1,7 @@
 # datasets located in `data` folder
 
+## Text
+
 ### BookCorpus_for_Aligning-Books-and-Movies
 
 ### chainer_sketch08_output
@@ -10,6 +12,8 @@ media theory, art, philosophy texts
 
 ### glove
 
+## Image
+
 [Global Vectors for Word Representation](http://nlp.stanford.edu/projects/glove/)
 ### mscoco
 
@@ -18,6 +22,8 @@ media theory, art, philosophy texts
 ### linuxscreenshots
 
 47GB of desktop screenshots from linux distributions
+
+## Audio
 
 ### opera
 
