@@ -12,9 +12,10 @@ media theory, art, philosophy texts
 
 ### glove
 
+[Global Vectors for Word Representation](http://nlp.stanford.edu/projects/glove/)
+
 ## Image
 
-[Global Vectors for Word Representation](http://nlp.stanford.edu/projects/glove/)
 ### mscoco
 
 [MS-Coco dataset](http://mscoco.org/) of around ~80k images, which have millions of hand-labeled captions associated with them which can be found on the official website.
