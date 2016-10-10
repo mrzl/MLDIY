@@ -6,7 +6,7 @@
 
 ### chainer_sketch08_output
 
-## wikipedia dump
+### wikipedia dump
 11 gb, enwiki-latest-pages-articles.xml.bz2
 03-Oct-2016 16:56 
 
