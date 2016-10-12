@@ -59,3 +59,8 @@ around 5.3GB of famous operas from Wagner, Mozart, Rossini, Verdi and others. pr
 ### VCTK-Corpus
 
 Recordings of humans speaking, used by DeepMind [to train wavenets](https://deepmind.com/blog/wavenet-generative-model-raw-audio/)
+
+
+----------------------
+
+Massive collection of dataset links: https://www.quora.com/Data/Where-can-I-find-large-datasets-open-to-the-public
