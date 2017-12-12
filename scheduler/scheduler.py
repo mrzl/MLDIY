@@ -83,13 +83,9 @@ class Scheduler(object):
 
         try:
             self.lock()
-            with open(self._log_file, 'a') as f:
-                iso_time = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time()))
-                f.write(iso_time + ': ' + script_to_run + ' started\n')
+            self.log(script_to_run + ' started\n')
             success = subprocess.run([script_to_run])
-            with open(self._log_file, 'a') as f:
-                iso_time = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time()))
-                f.write(iso_time + ': ' + str(success) + '\n')
+            self.log(str(success) + '\n')
 
             if success.returncode is 0:
                 self.unlock()
@@ -103,6 +99,11 @@ class Scheduler(object):
         except OSError as e:
             print("OS error in run(): {0}".format(e))
             self.cleanup()
+
+    def log(self, msg):
+        with open(self._log_file, 'a') as f:
+            iso_time = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time()))
+            f.write(iso_time + ': ' + msg)
 
     @staticmethod
     def cleanup():
