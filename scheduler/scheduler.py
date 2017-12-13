@@ -84,7 +84,9 @@ class Scheduler(object):
         try:
             self.lock()
             self.log(script_to_run + ' started\n')
-            success = subprocess.run([script_to_run])
+            f = open(self._log_file, 'a')
+            success = subprocess.run([script_to_run], stdout=f)
+            f.close()
             self.log(str(success) + '\n')
 
             if success.returncode is 0:
