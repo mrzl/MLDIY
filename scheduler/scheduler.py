@@ -29,8 +29,9 @@ class Scheduler(object):
         #self._jobs_path = '/home/mar/jobs/'
         self._log_file = join(self._jobs_path, 'log.txt')
         self._lock_file = join(self._jobs_path, 'lock.lck')
-        self._finished_path = join(self._jobs_path, 'done')
-        self._failed_path = join(self._jobs_path, 'failed')
+        self._finished_path = join(self._jobs_path, 'done/')
+        self._failed_path = join(self._jobs_path, 'failed/')
+        self._logs_path = join(self._jobs_path, 'logs/')
 
         if not isdir(self._jobs_path):
             makedirs(self._jobs_path)
@@ -38,9 +39,10 @@ class Scheduler(object):
             makedirs(self._finished_path)
         if not isdir(self._failed_path):
             makedirs(self._failed_path)
+        if not isdir(self._logs_path):
+            makedirs(self._logs_path)
 
         if self.is_locked():
-            print('locked: still running')
             sys.exit(0)
 
         try:
@@ -60,11 +62,9 @@ class Scheduler(object):
         return isfile(self._lock_file)
 
     def lock(self):
-        print('locking')
         open(self._lock_file, 'w').close()
 
     def unlock(self):
-        print('unlocking')
         remove(self._lock_file)
 
     def move_job(self, src, dstdir, dstfile):
@@ -84,9 +84,8 @@ class Scheduler(object):
         try:
             self.lock()
             self.log(script_to_run + ' started\n')
-            f = open(self._log_file, 'a')
-            success = subprocess.run([script_to_run], stdout=f)
-            f.close()
+            with open(join(self._logs_path, script), 'w') as script_log:
+                success = subprocess.run([script_to_run], stdout=script_log)
             self.log(str(success) + '\n')
 
             if success.returncode is 0:
