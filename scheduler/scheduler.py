@@ -84,7 +84,7 @@ class Scheduler(object):
         try:
             self.lock()
             self.log(script_to_run + ' started\n')
-            with open(join(self._logs_path, script), 'w') as script_log:
+            with open(join(self._logs_path, script) + '.log', 'w') as script_log:
                 success = subprocess.run([script_to_run], stdout=script_log)
             self.log(str(success) + '\n')
 
