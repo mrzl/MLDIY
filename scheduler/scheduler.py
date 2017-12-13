@@ -78,7 +78,7 @@ class Scheduler(object):
         rename(src, dst)
 
     def run(self):
-        script = self.scripts[0][0]
+        script = self.scripts[0]
         script_to_run = join(self._jobs_path, script)
 
         try:
@@ -117,7 +117,10 @@ class Scheduler(object):
             sort_me[filename] = getmtime(join(self._jobs_path, filename))
 
         sorted_scripts = [(k, sort_me[k]) for k in sorted(sort_me, key=sort_me.get, reverse=False)]
-        return sorted_scripts
+        sorted_filenames_only = []
+        for tuple in sorted_scripts:
+            sorted_filenames_only.append(tuple[0])
+        return sorted_filenames_only
 
 if __name__ == '__main__':
     scheduler = Scheduler()
