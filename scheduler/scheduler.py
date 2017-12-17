@@ -31,6 +31,7 @@ class Scheduler(object):
         self._lock_file = join(self._jobs_path, 'lock.lck')
         self._finished_path = join(self._jobs_path, 'done/')
         self._failed_path = join(self._jobs_path, 'failed/')
+        self._overtake_path = join(self._jobs_path, 'overtake/')
         self._logs_path = join(self._jobs_path, 'logs/')
 
         if not isdir(self._jobs_path):
@@ -41,17 +42,24 @@ class Scheduler(object):
             makedirs(self._failed_path)
         if not isdir(self._logs_path):
             makedirs(self._logs_path)
+        if not isdir(self._overtake_path):
+            makedirs(self._overtake_path)
 
         if self.is_locked():
             sys.exit(0)
 
         try:
+            # user überholspur first
+            overtake_files = [f for f in listdir(self._overtake_path) if isfile(join(self._overtake_path, f))]
+            self.overtake_scripts = [x for x in overtake_files if x.endswith('.sh')]
+            self.overtake_scripts = self.sort(self.overtake_scripts)
+
             files = [f for f in listdir(self._jobs_path) if isfile(join(self._jobs_path, f))]
             self.scripts = [x for x in files if x.endswith('.sh')]
             self.scripts = self.sort(self.scripts)
 
             # no scripts found, abort
-            if len(self.scripts) is 0:
+            if len(self.scripts) is 0 and len(self.overtake_scripts) is 0:
                 self.cleanup()
 
         except OSError as e:
@@ -78,8 +86,13 @@ class Scheduler(object):
         rename(src, dst)
 
     def run(self):
-        script = self.scripts[0]
-        script_to_run = join(self._jobs_path, script)
+        # überholspur first
+        if len(self.overtake_scripts) > 0:
+            script = self.overtake_scripts[0]
+            script_to_run = join(self._overtake_path, script)
+        else:
+            script = self.scripts[0]
+            script_to_run = join(self._jobs_path, script)
 
         try:
             self.lock()
