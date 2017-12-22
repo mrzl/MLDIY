@@ -6,23 +6,6 @@ import subprocess
 
 
 class Scheduler(object):
-    """
-    a bash file scheduler in python3
-
-    it makes sure that only one job is running at a time
-
-    should be added as a cronjob (crontab -e)
-    (* * * * * python3 /opt/scheduler/scheduler.py >> /opt/scheduler/cron.log)
-
-    jobs are bash files in /opt/scheduler/jobs/
-    they'll will be run according to the modification date of the file
-    make sure they are executable (chmod a+x job.sh)
-
-    done/failed jobs will be moved to a done/failed subfolder
-
-    in the bash script, use absolute paths to binaries, crontab
-    does not know about any environment variables from your .bashrc etc
-    """
     def __init__(self):
         self.continue_on_fail = True
         self._jobs_path = '/opt/scheduler/jobs/'
@@ -49,14 +32,14 @@ class Scheduler(object):
             sys.exit(0)
 
         try:
-            # user überholspur first
+            # use überholspur first
             overtake_files = [f for f in listdir(self._overtake_path) if isfile(join(self._overtake_path, f))]
             self.overtake_scripts = [x for x in overtake_files if x.endswith('.sh')]
-            self.overtake_scripts = self.sort(self.overtake_scripts)
+            self.overtake_scripts = self.sort(self._overtake_path, self.overtake_scripts)
 
             files = [f for f in listdir(self._jobs_path) if isfile(join(self._jobs_path, f))]
             self.scripts = [x for x in files if x.endswith('.sh')]
-            self.scripts = self.sort(self.scripts)
+            self.scripts = self.sort(self._jobs_path, self.scripts)
 
             # no scripts found, abort
             if len(self.scripts) is 0 and len(self.overtake_scripts) is 0:
@@ -97,9 +80,13 @@ class Scheduler(object):
         try:
             self.lock()
             self.log(script_to_run + ' started\n')
-            with open(join(self._logs_path, script) + '.log', 'w') as script_log:
+
+            script_log_file = join(self._logs_path, script) + '.log'
+            with open(script_log_file, 'w') as script_log:
                 success = subprocess.run([script_to_run], stdout=script_log)
             self.log(str(success) + '\n')
+
+            is_out_of_memory = self.check_out_of_memory(script_log_file)
 
             if success.returncode is 0:
                 self.unlock()
@@ -123,16 +110,23 @@ class Scheduler(object):
     def cleanup():
         sys.exit(1)
 
-    def sort(self, file_names):
+    def sort(self, path, file_names):
         sort_me = {}
         for filename in file_names:
-            sort_me[filename] = getmtime(join(self._jobs_path, filename))
+            sort_me[filename] = getmtime(join(path, filename))
 
         sorted_scripts = [(k, sort_me[k]) for k in sorted(sort_me, key=sort_me.get, reverse=False)]
         sorted_filenames_only = []
         for tuple in sorted_scripts:
             sorted_filenames_only.append(tuple[0])
         return sorted_filenames_only
+
+    def check_out_of_memory(self, log_file_name):
+        with open(log_file_name, 'r') as f:
+            text = f.readlines()
+            print(text)
+        return False
+
 
 if __name__ == '__main__':
     scheduler = Scheduler()
