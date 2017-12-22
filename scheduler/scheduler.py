@@ -1,5 +1,7 @@
 from os import listdir, remove, rename, makedirs
 from os.path import isfile, join, isdir, getmtime
+from os import stat
+from pwd import getpwuid
 import sys
 import time
 import subprocess
@@ -81,9 +83,14 @@ class Scheduler(object):
             self.lock()
             self.log(script_to_run + ' started\n')
 
+            script_owner = getpwuid(stat(script_to_run).st_uid).pw_name
+            finished_script_cmd = 'sudo su -c \"' + script_to_run + '\"  -s /bin/bash ' + script_owner
+            print(finished_script_cmd)
+
+
             script_log_file = join(self._logs_path, script) + '.log'
             with open(script_log_file, 'w') as script_log:
-                success = subprocess.run([script_to_run], stdout=script_log)
+                success = subprocess.run([finished_script_cmd], stdout=script_log, shell=True, check=True)
             self.log(str(success) + '\n')
 
             is_out_of_memory = self.check_out_of_memory(script_log_file)
