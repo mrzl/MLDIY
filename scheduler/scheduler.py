@@ -86,7 +86,7 @@ class Scheduler(object):
             # determine the owner of the script
             script_owner = getpwuid(stat(script_to_run).st_uid).pw_name
             # construct a cmd to run the script as the owner
-            finished_script_cmd = 'sudo su -c \"' + script_to_run + '\"  -s /bin/bash ' + script_owner
+            finished_script_cmd = 'sudo su -c ' + script_to_run + ' -s /bin/bash ' + script_owner
 
             script_log_file = join(self._logs_path, script) + '.log'
             with open(script_log_file, 'w') as script_log:
