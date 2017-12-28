@@ -25,3 +25,5 @@ this is done via
 
 wanna use a venv?
 source /mnt/drive1/virtualenvs/eco_v4/bin/activate
+
+each jobs logs (stdout too) will be saved to the logs/ folder and automatically deleted after 2 weeks

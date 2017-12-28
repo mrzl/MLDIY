@@ -4,6 +4,7 @@ from os import stat
 from pwd import getpwuid
 import sys
 import time
+import datetime
 import subprocess
 
 
@@ -33,6 +34,7 @@ class Scheduler(object):
         if self.is_locked():
             sys.exit(0)
 
+        self.delete_old_logs()
         try:
             # use überholspur first
             overtake_files = [f for f in listdir(self._overtake_path) if isfile(join(self._overtake_path, f))]
@@ -133,6 +135,16 @@ class Scheduler(object):
             text = f.readlines()
             print(text)
         return False
+
+    def delete_old_logs(self):
+        logs = [f for f in listdir(self._logs_path) if isfile(join(self._logs_path, f))]
+        maxtime = datetime.datetime.now() - datetime.timedelta(days=14)
+        maxtimeutc = int(time.mktime(maxtime.timetuple()))
+        for log in logs:
+            full_path = join(self._logs_path, log)
+            t = getmtime(full_path)
+            if t < maxtimeutc:
+                remove(full_path)
 
 
 if __name__ == '__main__':
